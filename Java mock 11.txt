@@ -1,0 +1,226 @@
+                                               Java Mock
+
+
+
+What is the output of the following code ?
+
+public static void main(String ags[]){
+        
+          
+    String b = "abc" ;           
+ String a = new String("abc");------new object will be created in s.c.p if there 
+---creates string in s.c.p                              is no object present in s.c.p
+       
+ string str = "abc";
+ String str1 = "abc";
+ string str2 = new String ("abc");
+
+
+
+
+
+
+
+
+
+
+
+
+
+What is the output of the following program ?
+
+    public static void main(String ags[]){
+        String a="abc";
+        String b=new String("abc");
+        System.out.println(a.equals(b));
+        System.out.println(a==b);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Output of the below program ?
+
+public static void main(String ags[]){
+        String a=new String("abc");
+        String b=new String("abc");
+        System.out.println(a.equals(b));
+        System.out.println(a==b);
+    }
+
+
+
+------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class examples {
+	
+
+		 public static void main(String[] args) {
+
+		  Integer i1 = 128;
+		  Integer i2 = 128;
+
+		  System.out.println(i1 == i2);
+
+		  Integer i3 = 127;
+		  Integer i4 = 127;
+
+		  System.out.println(i3 == i4);
+
+		 }
+
+		    
+	}
+
+
+         Integer i3 =   Integer.valueof(127);
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class examples {
+	public static void show() {
+
+		  System.out.println(" method called");
+		 }
+
+		 public static void main(String[] args) {
+
+			 examples obj = null;
+		  obj.show();
+
+		 }
+
+}	
+
+
+
+ 
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class MyProgram 
+{
+    public static void throwit() 
+    {
+        throw new RuntimeException();
+    }
+    public static void main(String args[])
+    {
+        try 
+        {
+            System.out.println("Hello world ");
+            throwit();
+            System.out.println("Done with try block ");
+        }
+        finally 
+        {
+            System.out.println("Finally executing ");
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class ExecptionTest {
+ public static void main(String[] args) {
+
+  System.out.print("Start ");
+  try {
+   System.out.print("Hello world");
+   throw new FileNotFoundException();
+  }
+  System.out.print(" Catch Here "); /* Line 12 */
+  catch (EOFException e) {
+   System.out.print("End of file exception");
+  } catch (FileNotFoundException e) {
+   System.out.print("File not found");
+  }
+ }
+}

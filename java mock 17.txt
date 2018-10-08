@@ -1,0 +1,153 @@
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("1234".length());
+  }
+}
+
+op::: 4
+
+
+public static final class Class {
+  static final int id = 1;
+
+  Class() {
+  }
+
+  static public int id() {
+    return id;
+  }
+
+}
+
+OP:::class cannot be static
+
+
+public class A implements Comparable<A> {
+
+  final int a;
+
+  A(final int a) {
+    this.a = a;
+  }
+
+  public int compareTo(A that) {
+    return this.a - that.a;
+  }
+
+  public static void main(String[] args) {
+    A a1 = new A(1);
+    A a2 = new A(2);
+    System.out.println(a1 > a2);
+  }
+
+}
+
+
+operator > is not defined for type A - correct
+
+-----------------------------------------------------------------------------------
+
+class bc{
+	
+	int b=10;
+
+	public int compareTo(A a1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
+	
+	public class A implements Comparable<A> {
+
+		  final int a;
+
+		  A(final int a) {
+		    this.a = a;
+	//System.out.println(a);
+		  }
+
+		  public int compareTo(A that) {
+			  System.out.println(that);
+		    return this.a - that.a;
+		  }
+
+		  public static void main(String[] args) {
+			  bc b =new bc();
+		    A a1 = new A(1);
+		    A a2 = new A(2);
+		    int x  = b.compareTo(a1);
+		    int u=   a2.compareTo(a2);
+		   
+		    System.out.println(x == u);
+		  }
+}
+--------------------------------------------------------------------------------------------
+
+
+
+
+public class X {
+
+	 private int x;
+
+	  public X(int x) {
+	    this.x = x;
+	  }
+
+	  public String toString() {
+	    return Integer.toString(x);
+	  }
+
+	  public static void main(String[] args) {
+	    X[] array = new X[3];
+	    array[0] = new X(3);
+	    array[1] = new X(1);
+	    array[2] = new X(2);
+
+	
+	    System.out.println(Arrays.toString(array));
+	  }
+}
+
+
+[3, 1, 2]
+
+
+String s = null;
+if ((s != null) & (!s.isEmpty())) {
+  System.out.println(s);
+} else {
+  System.out.println("the string is null");
+}
+
+NullPointerException - correct
+
+
+-------------------------------------------------------------------------------------
+
+
+
+public class A {
+
+  int f1 (boolean flag) {
+    int result;
+    if (flag) {
+      result = 1;
+    } else {
+      result = 2;
+    }
+    return result;
+  }
+
+  int f2 (boolean flag) {
+    int result;
+    if (flag) result = 1;
+    if (!flag) result = 2;
+    return result;
+  }
+
+}
+
+
+method f2 will cause a compile-time error - correct
+

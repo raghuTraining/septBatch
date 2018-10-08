@@ -1,0 +1,264 @@
+                                          JAVA MOCk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Test 
+{  
+    public static void aMethod() throws Exception 
+    {
+        try /* Line 5 */
+        {
+            throw new Exception(); /* Line 7 */
+        } 
+
+        
+        finally /* Line 9 */
+        {
+            System.out.print("finally "); /* Line 11 */
+        } 
+    } 
+    public static void main(String args[]) 
+    {
+        try 
+        {
+            aMethod();  
+        } 
+        catch (Exception e) /* Line 20 */
+        {
+            System.out.print("exception "); 
+        } 
+        System.out.print("finished"); /* Line 24 */
+    } 
+}
+finally exception finished
+--------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Exc0 extends Exception { } 
+class Exc1 extends Exc0 { } /* Line 2 */
+public class Test 
+{  
+    public static void main(String args[]) 
+    { 
+        try 
+        {  
+            throw new Exc1(); /* Line 9 */
+        } 
+        catch (Exc0 e0) /* Line 11 */
+        {
+            System.out.println("Ex0 caught"); 
+        } 
+        catch (Exception e) 
+        {
+            System.out.println("exception caught");  
+        } 
+    } 
+}
+Exo caught
+--------------------------------------------------
+
+1
+23
+456
+	
+
+
+for(int i=1;i<=3;i++){
+ num=1; 
+
+for(int j=1;j<=i;j++)
+Syp(num); 
+num=+1
+}
+syln();
+
+}
+
+
+for(int i=1;i<=3; i++)
+		{
+			for(int j=1; j<=2; j++)
+		{
+	
+				System.out.print(j);
+}
+System.out.println(" ");
+
+
+}
+
+	for(i=1;i<=3;i++)
+{
+             int count=1;
+        for(j=0;j<3;j++)
+{
+           s.o.p(count++);
+    }
+          s.o.pln();
+}
+---------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Outer_Demo {
+		   int num;
+		   
+		   // inner class
+		   private class Inner_Demo {
+		      public void print() {
+		         System.out.println("This is an inner class");
+		      }
+		   }
+		   
+		   // Accessing he inner class from the method within
+		   void display_Inner() {
+		      Inner_Demo inner = new Inner_Demo();
+		      inner.print();
+		   }
+-----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	public static void main(String args[]) {
+	int x=2;
+	if(x=2) 
+	
+	{
+		System.out.println("Equal");
+		
+	}
+}
+
+
+
+-------------------------------------------------------------------------
+StringBuffer sb1= new StringBuffer ("abc");
+StringBuffer sb2= sb1;
+sb1.append("d");
+System.out.println(sb1+ " "+sb2+ " "+(sb1==sb2));
+
+
+abcd abcd true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ public static void main(String args[]) 
+    { 
+       s.o.p(Exceptions());
+     }
+
+ public static int Exceptions()
+{
+        try 
+        {  
+            System.out.println("try")
+           
+        } 
+        catch (Exception e) /* Line 11 */
+        {
+            System.out.println("caught"); 
+        } 
+        finally
+        {
+            System.out.println("finally");  
+            return 90;
+        } 
+}                                    ---------------- try finally
+
+try 
+finally
+
+
+
+
+
+
+
+-------------------------------------------------------------------------
+
+
+
+
+

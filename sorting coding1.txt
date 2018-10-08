@@ -1,0 +1,107 @@
+public class insertionSort {
+
+	
+	public static void main(String[] args) {
+	         
+		        int[] input = { 4, 2, 9, 6, 23, 12, 34, 0, 1 };
+		        insertionSort(input);
+		    }
+		     
+		    private static void printNumbers(int[] input) {
+		         
+		        for (int i = 0; i < input.length; i++) {
+		            System.out.print(input[i] + ", ");
+		        }
+		        System.out.println("\n");
+		    }
+		 
+		    public static void insertionSort(int array[]) {
+		        int n = array.length;
+		        for (int j = 1; j < n; j++) {
+		            int key = array[j];
+		            int i = j-1;
+		            while ( (i > -1) && ( array [i] > key ) ) {
+		                array [i+1] = array [i];
+		                i--;
+		            }
+		            array[i+1] = key;
+		            printNumbers(array);
+		        }
+		    }
+		}
+
+	------------------------------------------------------------
+
+public class bubbleSort {
+
+	   void bubbleSort(int[] arr) {  
+	        int n = arr.length;  
+	        int temp = 0;  
+	         for(int i=0; i < n; i++){  
+	                 for(int j=1; j < (n-i); j++){  
+	                          if(arr[j-1] > arr[j]){  
+	                                 //swap elements  
+	                                 temp = arr[j-1];  
+	                                 arr[j-1] = arr[j];  
+	                                 arr[j] = temp;  
+
+	                         }  
+       			            printNumbers(arr);
+
+	                 }  
+
+	         }
+      
+	   }
+public static void main(String[] args) {
+	
+	int[] array = {3,5,1,6,2,7};
+	bubbleSort bs = new bubbleSort();
+	
+	           bs.bubbleSort(array);
+	           
+}	  
+
+
+private static void printNumbers(int[] input) {
+    
+    for (int i = 0; i < input.length; i++) {
+        System.out.print(input[i] + ", ");
+    }
+    System.out.println("\n");
+}
+
+
+}
+
+----------------------------------------------------------------
+
+
+public class selectionSort {
+
+
+	  public static void main(String[] args){  
+		  
+		  int[] arr = {11,2,5,8,1,10};
+	      for (int i = 0; i <= arr.length - 1; i++)  
+	        {  
+	            int index = i;  
+	            for (int j = i + 1; j < arr.length; j++){  
+	                if (arr[j] < arr[index]){  
+	                    index = j;//searching for lowest index  
+	                    
+
+	                }  
+	                      
+	            }      	      	               
+      	          int smallerNumber = arr[index];   
+	            arr[index] = arr[i];  
+	            arr[i] = smallerNumber;  
+	            System.out.print(arr[i]+" ");  
+	        }  
+	
+	  }  
+
+	
+}
+-----------------------------------------------

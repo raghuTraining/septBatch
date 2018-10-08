@@ -1,0 +1,116 @@
+package Tests;
+
+public class n {
+	public static void main(String[] args) {
+        String str = "book";
+       // System.out.println(str.substring(1));
+        String reversed = reverseString(str);
+        System.out.println("The reversed string is: " + reversed);
+    }
+
+    public static String reverseString(String str)
+    {
+        if (str.length()==1) {
+            System.out.println(str);
+            return str;}
+        
+      else {
+        //Calling Function Recursively
+        return reverseString(str.substring(1)) + str.charAt(0);
+        
+      }
+    }
+
+	
+
+		}
+
+
+
+
+
+int Output = 10;
+boolean b1 = false;
+if((b1 == true) && ((Output += 10) == 20))
+{
+    System.out.println("We are equal " + Output);
+}
+else
+{
+    System.out.println("Not equal! " + Output);
+}   
+
+The output will be "Not equal! 10". Please note that && is short-circuit logical AND operator. If first operand (before &&) is false (or evaluated to false) then the other operand will not be evaluated. This illustrates that the Output +=10 calculation was never performed because processing stopped after the first operand was evaluated to be false. If you change the value of b1 to true,
+ processing occurs as you would expect and the output would be "We are equal 20".
+
+In the following pieces of code, A and D will compile without any error. True or false?
+
+A: StringBuffer sb1 = "abcd";
+B: Boolean b = new Boolean("abcd"); 
+C: byte b = 255; 
+D: int x = 0x1234; 
+E: float fl = 1.2;
+
+
+False
+
+
+
+
+
+
+The code segments B and D will compile without any error. A is not a valid way to construct a StringBuffer, you need to create a StringBuffer object using "new". 
+B is a valid construction of a Boolean (any string other than "true" or "false" to the Boolean constructor will result in a Boolean with a value of "false"). 
+C will fail to compile because the valid range for a byte is -128 to +127 (i.e., 8 bits, signed). D is correct, 0x1234 is the hexadecimal representation in java. E fails to compile because the compiler interprets 1.2 as a double being assigned to a float (down-casting), which is not valid. You either need an explicit cast, as in "(float)1.2" or "1.2f", to indicate a float.
+
+
+
+    public class AssertTest
+    {
+        public void methodA(int i)
+        {
+            assert i >= 0 : methodB();
+            System.out.println(i);
+        }
+    
+        public void methodB()
+        {
+            System.out.println("The value must not be negative");
+        }
+        public static void main(String args[])
+        {
+            AssertTest test = new AssertTest();
+            test.methodA(-10); 
+        }    
+    }    
+C. The code will not compile.
+class Value
+{
+public int i = 15;
+}
+public class Test
+{
+    public static void main(String argv[])
+    {
+                 Test t = new Test();
+        t.first();
+              }
+public void first()
+    {
+               int i = 5;
+                   Value v = new Value();
+        v.i = 25;
+        second(v, i);
+            System.out.println(v.i);
+    }
+    public void second(Value v, int i)
+    {
+        i = 0;
+                    v.i = 20;
+        Value val = new Value();
+                    v =  val;
+                System.out.println(v.i + " " + i);
+                 
+    }
+A. 15 0
+         20

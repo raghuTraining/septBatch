@@ -1,0 +1,459 @@
+
+
+
+
+
+
+
+
+
+
+1) lambda is a new programming constrant which lets u build  java applications.
+
+
+1) java lambdas
+
+2) using of lambdas
+
+3)functional interfaces
+
+4)method references
+
+5) collection improvements
+
+
+why lamdbas:::
+
+1) Enables functional programming
+2)readable and consise code i.e eleminates boiler code
+3)easier-to-use API s and libraries
+4) enables support for parallel processing
+
+
+
+
+install java 1.8
+
+open command prompt java -version
+
+
+
+Why functional programming than ooprogamming
+
+ANS::: it doesnt do any thing new but makes a better and readable code.....
+
+
+problems in oop:::
+
+1) every thing is object no isloation of code
+2) all codes are objects or classes
+
+   in fp we can create function which is in isolation.
+
+
+
+
+
+
+
+
+
+
+package lambdaExample;
+
+interface abc {
+	
+	public int m1(int a , int b);
+}
+
+
+public class java7example {
+
+public void m1(java7Interface j7) {
+	
+	j7.interfaces();
+	
+	
+}
+		public static void main(String[] args) {
+			
+			java7example j7exp = new java7example();
+			java7Implimentation imp = new java7Implimentation();
+		
+			j7exp.m1(imp);
+			
+		//	java7Interface j = () -> System.out.println ("hello world");
+			
+		//	j.interfaces();
+			
+		//	abc   k =   (int a , int b) -> a*b;
+			
+		//	k.m1(2,3);
+
+		}
+		           
+		
+	}
+
+what is the difference blw
+
+java7Implimentation imp = new java7Implimentation();
+java7Interface j = () -> System.out.println ("hello world");
+
+There need not be class created again to create a method just create a method give its type 
+
+
+Anonamas inner class:::::
+
+package lambdaExample;
+
+interface abc {
+	
+	public int m1(int a , int b);
+}
+
+
+public class java7example {
+
+public void m1(java7Interface j7) {
+	
+	j7.interfaces();
+	
+	
+}
+		public static void main(String[] args) {
+			
+			java7example j7exp = new java7example();
+			java7Implimentation imp = new java7Implimentation();
+		
+			//j7exp.m1(imp);
+
+                           //we can use same interface and can create no.of lamdas
+
+			java7Interface inter1 = () -> System.out.println(" world"); 
+			
+			java7Interface inter2 = () -> System.out.println(" hello");
+			
+			java7Interface inter = new java7Interface() {
+				
+				    public void interfaces() {
+					
+					System.out.println("hello1 world"); }
+				
+			
+		};
+		j7exp.m1(inter2);
+			
+}}
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+                             TypeInference
+
+In order to figure out what type of your lambdas are
+
+
+
+	public static void main(String[] args) {
+
+		typeinterface  mthd1 =   (String s)-> s.length();
+		
+		System.out.print(mthd1.getlength("hello"));
+		
+		printing((s-> s.length()));
+		
+	}
+                        interface typeinterface {
+                        	
+                        	public int getlength(String s);
+                        	
+                        }
+                        public static void printing(typeinterface ti) {
+                        	
+                        	System.out.print(ti.getlength("hello"));         	
+                        }
+                        
+                        
+}
+
+
+--------------------------------------------------------------------------------------------
+
+
+why interfaces instead of function or lambda types
+
+Ans::: the main is backwardcompatability. i.e
+
+we no need to re-write the code and can be used for all those anonamous classes and methods which has
+same signature....if we have to use function type we always need to re-write the libraries
+
+
+
+let us see how lambda takes instance of runnable in order create a thread
+
+Thread myThread = new Thread( new Runnable(){
+
+public void run(){
+
+System.out.println("printed inside lamda");}
+
+});
+
+myThread.run();
+
+In case of only 1 method in interface we can pass lambda from instance.
+Thread myThread1 = new Thread( () -> System.out.println("printed inside lamda"));
+myThread1.run();
+-------------------------------------------------------------------------------------------------
+
+
+                                   Functional Interface
+
+An Interface that contains exactly one abstract method is known as functional interface. It can have any number of default, static methods but can contain only one abstract method. It can also declare methods of object class.
+
+Functional Interface is also known as Single Abstract Method Interfaces or SAM Interfaces. It is a new feature in Java, which helps to achieve functional programming approach.
+
+Example 1
+@FunctionalInterface  
+interface sayable{  
+    void say(String msg);  
+}  
+public class FunctionalInterfaceExample implements sayable{  
+    public void say(String msg){  
+        System.out.println(msg);  
+    }  
+    public static void main(String[] args) {  
+        FunctionalInterfaceExample fie = new FunctionalInterfaceExample();  
+        fie.say("Hello there");  
+    }  
+}  
+Test it Now
+Output:
+
+Hello there
+A functional interface can have methods of object class. See in the following example.
+
+Example 2::::::
+      
+@FunctionalInterface  
+interface sayable{  
+    void say(String msg);   // abstract method  
+    // It can contain any number of Object class methods.  
+    int hashCode();  
+    String toString();  
+    boolean equals(Object obj);  
+}  
+public class FunctionalInterfaceExample2 implements sayable{  
+    public void say(String msg){  
+        System.out.println(msg);  
+    }  
+    public static void main(String[] args) {  
+        FunctionalInterfaceExample2 fie = new FunctionalInterfaceExample2();  
+        fie.say("Hello there");  
+    }  
+}  
+
+
+java 8 example:::
+
+public class ExampleJava8 {
+	
+	public static void printAll(List<person> people) {
+		
+		for(person p : people) {
+		
+			System.out.print(p);
+		
+	}}
+	
+public static void printConditionally(List<person> people, Predicate<person> predicate) {
+		
+		for(person p : people) {
+		
+			if(predicate.test(p)) {
+				
+				System.out.println(p);
+
+			}
+		
+	}}
+
+
+	public static void main(String[] args) {
+
+		
+		List group = Arrays.asList(
+				
+		    new person("john","Dickers", 60),
+		    new person("james","caroll", 45),
+		    new person("lewis","carley", 58),
+		    new person("Thomas","Brante", 35)
+		    );
+		
+		//sort list by lastName
+		Collections.sort(group, (person p1,person p2) -> p1.getlastName().compareTo(p2.getlastName()));
+		
+		//create a method that prints all elements in a list
+		System.out.println("printing all elements");
+		printAll(group);
+		
+		//create a method that prints all persons that have last name starts with c
+		System.out.println("printing all elements having last name starts with c");
+         printConditionally(group, p->p.getlastName().startsWith("c"));
+		
+		
+	}
+
+}
+
+interface condition{
+	
+	boolean test(person n);}
+-------------------------------------------------------------------------------------
+
+java7 example:::
+
+
+public static void printAll(List<person> people) {
+		
+		for(person p : people) {
+		
+			System.out.print(p);
+		
+	}}
+
+public static void printConditionally(List<person> people, condition condition) {
+	
+	for(person p : people) {
+	
+		if(condition.test(p)) {
+			System.out.println(p);
+
+		}
+	
+}}
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		List group = Arrays.asList(
+				
+		    new person("john","Dickers", 60),
+		    new person("james","caroll", 45),
+		    new person("lewis","carley", 58),
+		    new person("Thomas","Brante", 35)
+		    );
+		
+	         	//sort list by lastNamer
+	           	Collections.sort(group, new Comparator<person>() {
+		     	@Override
+		    	public int compare(person p1, person p2) {
+				return p1.getlastName().compareTo(p2.getlastName());}
+			
+		});
+		
+               	//create a method that prints all elements in a list
+               	System.out.println("printing all elements");
+               	printAll(group);
+	
+	          //create a method that prints all persons that have last name starts with c
+			  System.out.println("printing all elements having last name starts with c");
+	           printConditionally(group,new condition() {
+	        	 
+	        	 @Override
+	        	 public boolean test(person p) {
+	        		 return p.getlastName().startsWith("c");
+	        	 }
+	         });
+	}
+}
+----------------------------------------------------------------------------------------------
+
+
+
+More lamda features.....
+
+
+Till now we created a new interfaces in order to pass lamda expression. now we use predefined interfaces
+
+https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html
+
+--------------------------------------------------------------------------------------------------
+public static void printConditionally(List<person> people, Predicate<person> predicate) {
+		
+		for(person p : people) {
+		
+			if(predicate.test(p)) {
+				
+				System.out.println(p);
+
+			}
+		
+	}}
+
+
+
+predicate is a predefined interface which is similar to condition interface which we created.
+It has.....
+
+
+                                   Exception handling
+
+
+public class exceptionHandling8 {
+
+	public static void main(String[] args) {
+		
+		int[] num= {2,3,4,5};
+        int key =0;
+		
+		mthd2(num, key, (v,k)-> System.out.println(v/k));
+		
+				
+
+	}
+		public static void mthd2(int[] num,int key, BiConsumer<Integer,Integer> consumer) {
+			
+			for(int i: num) {
+				
+				consumer.accept(i,key);}
+				
+			}
+			
+		}
+---------------------------------------------------------------------------------------------
+
+public class exceptionHandling8 {
+
+	public static void main(String[] args) {
+		
+		int[] num= {2,3,4,5};
+        int key =0;
+		
+		mthd2(num, key, 
+				
+				(v,k)-> { try {
+	                
+					System.out.println(v/k);}
+		
+				catch(Exception e) {
+					System.out.println(e);
+					
+				}
+	});
+	}
+		public static void mthd2(int[] num,int key, BiConsumer<Integer,Integer> consumer) {
+			
+			for(int i: num) {
+				
+				consumer.accept(i,key);}
+				
+			}
+			
+		}
+
+
+
+
+
+

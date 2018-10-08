@@ -1,0 +1,31 @@
+what is stateful and stateless?
+What is your understanding about JAX-RS?
+
+JAX-RS is defined as the Java API for RESTful web service. Among multiple libraries and framework, this is considered as the most suitable Java programming language based API which supports RESTful web service.
+what is resource
+ ‘Resource’ is defined as an object of a type which can be an image, HTML file, text data, and any type of dynamic data. There are varieties of representation formats available in order to represent a resource.
+
+Some most common are enlisted below:
+
+JSON
+YAML
+XML
+HTM
+
+what is header 
+
+What is Caching?
+
+Caching is the process in which server response is stored so that a cached copy can be used when required and there is no need of generating the same response again. This process not only reduces the server load but in turn increase the scalability and performance of the server. Only the client is able to cache the response and that too for a limited period of time.
+
+Mentioned below are the header of the resources and their brief description so that they can be identified for the caching process:
+
+Time and Date of resource creation
+Time and date of resource modification that usually stores the last detail.
+Cache control header
+Time and date at which the cached resource will expire.
+The age which determines the time from when the resource has been fetched
+
+
+What Is The Upper Limit For A Payload To Pass In The POST Method?
+

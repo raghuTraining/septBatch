@@ -1,0 +1,47 @@
+                                           Threads
+
+Thread:::
+           lightweight sub process, ehich is independent.
+
+multithreading:::
+
+           Two or more threads in a single java program with main method is know as MT
+
+multiprocessing:::
+
+           multiple tasks run simultaneously.
+
+To create thread:::
+
+           extending a Thread class 
+
+           implementing Runnable interface
+
+Methods:::
+
+run()::: to perform action for a thread
+start():::
+sleep(long ms)::: 
+join(:ms)::: waits for a thread to die
+getPriority():::
+setPriority():::
+getName()::::
+setName()::::
+currentThread():::
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
