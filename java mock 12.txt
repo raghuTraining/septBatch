@@ -1,0 +1,210 @@
+                                    
+                                          JAVA MOCK
+
+class A {
+
+ static int method1(int i) {
+  return method2(121); }
+
+ static int method2(int i) {
+  return method3(11);   }
+
+ static int method3(int i) {
+  return method4(0);   }
+
+ static int method4(int i) {
+  return i += 11;   }
+
+ public static void main(String[] args) {
+
+  System.out.println(method1(11));
+
+ }
+
+}
+
+11
+ANS:::11
+
+-------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.io.EOFException;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class ExecptionTest {
+	 public static void main(String[] args) {
+
+		 Map m= new HashMap();
+	        m.put(null, "Fest");
+	        m.put(null,"Test");
+	        System.out.println(m);
+	    }
+	}
+	
+
+
+--------------------------------------------------------------------------------------
+
+
+public class examples {
+	public  static void show() {
+
+		  System.out.println(" method called");
+		 }
+
+		 public static void main(String[] args) {
+
+			 examples obj = null;
+		         obj.show();
+
+		 }
+
+}	
+
+NullpointerException----
+method called--------------static
+---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ public class ExecptionTest {
+ public static void main(String[] args) {
+
+  System.out.print("Start ");
+  try {
+   System.out.print("Hello world");
+   throw new FileNotFoundException();----------------
+  }
+       System.out.print(" Catch Here "); /* Line 12 */
+ 
+ catch (EOFException e) {
+   System.out.print("End of file exception");
+  }
+
+ catch (FileNotFoundException e) {
+   System.out.print("File not found");
+  }
+
+
+
+
+
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class B {
+
+ B b = new B();
+
+ public String show() {
+  return (true ? "Success" : "Failure");
+ }
+
+ public static void main(String[] args) {
+
+  B b = new B();
+  b.show();
+ }
+
+}
+
+
+ }
+}
+--------------------------------------------------
+
+
+public class Animal {
+public int i=12;
+public Animal(){
+i=13;
+}
+    public String yyy(){
+
+	return "Animal"+i; } }
+
+public class exmple{
+public static void main(String[] args) {
+	
+	HashSet<Animal> s= new HashSet<Animal>();
+	    s.add(new Animal());
+	    s.add(new Animal());
+	for(Animal a : s){
+	System.out.println(a);
+
+	}
+	}	}
+
+
+------------------------------------------------------------

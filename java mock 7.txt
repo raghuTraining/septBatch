@@ -1,0 +1,219 @@
+                                        JAVA MOCK
+
+int I = 0;
+    outer: while (true) 
+    {
+        I++;--1
+        inner: for (int j = 0; j < 10; j++) 
+        {
+            I += j;
+            if (j == 3)
+                continue inner;
+            break outer;
+        }
+        continue outer;
+    }
+System.out.println(I);---------1
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------
+
+public class HorseTest 
+{
+    public static void main (String [] args) 
+    {
+        class Horse 
+        {
+            public String name; /* Line 7 */
+            public Horse(String s) 
+            {
+                name = s;
+            }
+        } /* class Horse ends */
+        
+        Object obj = new Horse("Zippo"); /* Line 13 */-------------------
+        Horse h = (Horse) obj; /* Line 14 */
+        System.out.println(h.name);
+
+Horse obj = new Horse("Zippo")----------------------------------
+    }
+}
+
+	
+
+
+
+
+
+-------------------------------------------------------------------
+public class exmple implements Runnable 
+{ 
+	 private int x; 
+	    private int y;
+	
+	public static void main(String [] args) 
+    { 
+		exmple that = new exmple(); 
+	        (new Thread(that)).start( ); /* Line 8 */
+	        (new Thread(that)).start( );
+    }
+	
+	 public synchronized void run( ) /* Line 11 */
+	    { 
+	        for (int a=1; a<=3; a++) /* Line 13 */
+	        { 
+	            x++; 
+	            y++; 
+	            System.out.println("x = " + x + "y = " + y); 
+	        } 
+	    } 
+	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------
+
+
+
+public class ThreadTest extends Thread 
+{ 
+    public void run() 
+    { 
+        System.out.println("In run"); 
+        yield(); 
+        System.out.println("Leaving run"); 
+    } 
+    public static void main(String []argv) 
+    { 
+        (new ThreadTest()).start(); 
+    } 
+}
+
+------------------------------------------------------------------
+
+
+
+
+
+public class MyProgram 
+{
+    public static void main(String args[])
+    {
+        try 
+        {
+            System.out.print("Hello world ");
+        }
+        finally 
+        {
+            System.out.println("Finally executing ");
+        }
+    }
+}
+
+
+
+
+-------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class X 
+{  
+    public static void main(String [] args) 
+    {
+        try 
+        {
+            badMethod(); /* Line 7 */
+            System.out.print("A"); 
+        } 
+      
+        finally /* Line 14 */
+        {
+           System.out.print("C"); /* Line 16 */
+        }  
+        System.out.print("D"); /* Line 18 */
+    } 
+    public static void badMethod() 
+    {
+        throw new RuntimeException(); 
+    } 
+}
+
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class X 
+{ 
+    public static void main(String [] args) 
+    {
+        try 
+        {
+            badMethod();  
+            System.out.print("A"); 
+        }  
+        catch (Exception ex) 
+        {
+            System.out.print("B"); 
+        }  
+        finally 
+        {
+            System.out.print("C"); 
+        }  
+        System.out.print("D"); 
+    }  
+    public static void badMethod() {} 
+} 
+
+
+-------------------------------------------

@@ -1,0 +1,156 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class ExampleJava8 {
+	
+	public static void printAll(List<person> people) {
+		
+		for(person p : people) {
+		
+			System.out.print(p);
+		
+	}}
+	
+public static void printConditionally(List<person> people, Predicate<person> predicate) {
+		
+		for(person p : people) {
+		
+			if(predicate.test(p)) {
+				
+				System.out.println(p);
+
+			}
+		
+	}}
+	public static void main(String[] args) {
+		
+		List group = Arrays.asList(
+				
+		    new person("john","Dickers", 60),
+		    new person("james","caroll", 45),
+		    new person("lewis","carley", 58),
+		    new person("Thomas","Brante", 35)
+		    );
+		
+		//create a method that prints all elements in a list
+		System.out.println("printing all elements");
+		printAll(group);
+		
+		//create a method that prints all persons that have last name starts with c
+		System.out.println("printing all elements having last name starts with c");
+         printConditionally(group, p->p.getlastName().startsWith("c"));
+		
+		
+	}
+
+}
+---------------------------------
+
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class exampleJava7 {
+
+public static void printAll(List<person> people) {
+		
+		for(person p : people) {
+		
+			System.out.print(p);
+		
+	}}
+
+public static void printConditionally(List<person> people, condition condition) {
+	
+	for(person p : people) {
+	
+		if(condition.test(p)) {
+			System.out.println(p);
+
+		}
+	
+}}
+
+	@SuppressWarnings("unchecked")
+	
+	public static void main(String[] args) {
+		List group = Arrays.asList(
+				
+		    new person("john","Dickers", 60),
+		    new person("james","caroll", 45),
+		    new person("lewis","carley", 58),
+		    new person("Thomas","Brante", 35)
+		    );
+		
+	 
+		
+               	//create a method that prints all elements in a list
+               	System.out.println("printing all elements");
+               	printAll(group);
+	
+	          //create a method that prints all persons that have last name starts with c
+			  System.out.println("printing all elements having last name starts with c");
+	           printConditionally(group, new condition() {
+	        	 
+	        	 @Override
+	        	 public boolean test(person p) {
+	        		return p.getlastName().startsWith("c");
+
+	        	 }
+	         });
+	}
+}
+interface condition{
+	
+	boolean test(person n);}
+
+-----------------------------------------------
+
+public class person {
+		private String firstName;
+		private String lastName;
+		private int age;
+
+		
+		public person(String firstName,String lastName,int age ) {
+			
+			super();
+			this.firstName=firstName;
+			this.lastName=lastName;
+			this.age=age;
+			
+		}
+		
+		public String getfirstName() {
+			return firstName;
+		}
+		public void setFirstName(String firstName) {
+			
+			this.firstName=firstName;
+		}
+		
+		public String getlastName() {
+			return lastName;
+		}
+		
+		public void setLastName(String lastName) {
+			
+			this.lastName=lastName;
+
+		}
+		public int getAge() {
+			return age;
+		}
+		public void setAge(int age) {
+			this.age=age;
+		}
+		@Override
+		public String toString() {
+			return "person[FirstName=" + firstName+",lastName="+lastName+", age="+age+"]";
+		}
+
+}

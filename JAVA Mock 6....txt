@@ -1,0 +1,123 @@
+class PassS 
+{
+    public static void main(String [] args) 
+    {
+        PassS p = new PassS();
+        p.start();
+    }
+
+    void start() 
+    {
+        String s1 = "slip";
+        String s2 = fix(s1);
+        System.out.println(s1 + " " + s2);
+    }
+
+    String fix(String s1) 
+    {
+        s1 = s1 + "stream";
+        System.out.print(s1 + " ");
+        return "stream";
+    }
+}
+
+
+slipstream slip stream
+----------------------------------------------------
+class Test 
+{
+    public static void main(String [] args) 
+    {
+        int x=20;
+        String sup = (x < 15) ? "small" : (x < 22)? "tiny" : "huge";
+        System.out.println(sup);
+    }
+}
+
+B.	tiny
+This is an example of a nested ternary operator.
+-------------------------------------------------------------
+class Test 
+{
+    public static void main(String [] args) 
+    {
+        int x= 0;
+        int y= 0;
+        for (int z = 0; z < 5; z++) 
+        {
+            if (( ++x > 2 ) && (++y > 2)) 
+            {
+                x++;
+            }
+        }
+        System.out.println(x + " " + y);
+    }
+}
+
+C.	6 3
+----------------------------------------------------------
+
+public interface Foo 
+{ 
+    int k = 4; /* Line 3 */
+}
+
+Which three piece of codes are equivalent to line 3?
+final int k = 4;
+public int k = 4;
+static int k = 4;
+abstract int k = 4;
+protected int k = 4
+
+A.	1, 2 and 3
+-----------------------------------------------------------
+
+class MyThread extends Thread 
+{
+    public static void main(String [] args) 
+    {
+        MyThread t = new MyThread();
+        Thread x = new Thread(t);
+        x.start(); /* Line 7 */
+    }
+    public void run() 
+    {
+        for(int i = 0; i < 3; ++i) 
+        {
+            System.out.print(i + "..");
+        }
+    }
+}
+D.	
+0..1..2..
+
+------------------------------------------------------
+
+
+public class Test 
+{  
+    public static void main(String args[]) 
+    { 
+        int i = 1, j = 0; 
+        switch(i) 
+        { 
+            case 2: j += 6; 
+            case 4: j += 1; 
+            default: j += 2; 
+            case 0: j += 4; 
+        } 
+        System.out.println("j = " + j); 
+    } 
+}
+
+
+	
+j = 6
+--------------------------------------------------------
+String x = "xyz";
+x.toUpperCase(); /* Line 2 */
+String y = x.replace('Y', 'y');
+y = y + "abc";
+System.out.println(y);
+
+----------xyzabc

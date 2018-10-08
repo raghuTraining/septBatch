@@ -1,0 +1,280 @@
+	
+
+
+
+
+
+
+                                          java mock
+
+
+class abc{
+
+	
+	    void myMethod(int i) {
+
+           System.out.println("int version");
+}
+	   void myMethod(char s) {
+
+           System.out.println("char version");
+}
+	   
+	   
+	   public static void main(String args[])
+	  {
+		   abc obj = new abc();
+	            char ch = 'c';
+	             obj.myMethod(ch);
+	  }
+	  }
+
+
+
+
+
+
+
+
+
+
+
+
+public static void main(String[] args) {
+
+		TreeSet s = new TreeSet();
+		
+		TreeSet subs= new TreeSet();
+		
+		s.add("a"); s.add("b"); s.add("c"); s.add("d"); s.add("e");
+		
+		subs = (TreeSet) s.subSet("b",true,"d",true);
+		
+		 s.add("g");
+	         s.pollFirst();
+		System.out.println(subs); -------b
+		s.add("f2");
+		System.out.println(s.size()+" "+subs.size());
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package Tests;
+
+import java.util.Scanner;
+
+public class dowhile {
+
+	public static void main(String[] args) {
+
+		String input = "1 2 a 3";
+		
+		Scanner sc = new Scanner(input);
+		int x= 0;
+		do {
+			
+			x=sc.nextInt();
+			System.out.println(x+ " ");
+		}while(x!=0);
+	}
+
+}
+
+
+
+
+------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class exmples  {
+	
+public int mthdc(int x,int y) {
+		
+		return x+y;
+	}
+
+	public static void main(String[] args) {
+
+		short mygold=7;
+		int z= mthdc(mygold,6);
+                s.o.p(z);
+	}
+ 
+}
+
+
+
+
+
+
+--------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class exmples extends dowhile {
+	
+	public static void main(String[] args) {
+
+	int Output = 10;
+	boolean b1 = false;
+	if((b1 = true) && ((Output += 10) == 20))
+	{
+	    System.out.println("We are equal " + Output);
+	}
+	else
+	{
+	    System.out.println("Not equal! " + Output);
+	}  
+	System.out.println(b1);
+}
+}
+
+
+
+---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Value
+{
+    public int i = 15;
+}
+public class Test
+{
+    public static void main(String argv[])
+    {
+        Test t = new Test();
+        t.first();
+    }
+    public void first()
+    {
+        int i = 5;
+        Value v = new Value();
+        v.i = 25;
+        second(v, i);
+        System.out.println(v.i);
+    }
+    public void second(Value v, int i)
+    {
+        i = 0;
+        v.i = 20;
+        Value val = new Value();
+        v =  val;
+        System.out.println(v.i + " " + i);
+    }
+}
+
+
+
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+output:::
+int version.
+
+char type in java is internally stored as integer and there is a method which takes int as an input. 
+D is correct, on line 9 char ch is widened to an int and passed to int version of the myMethod(). 
+
+
+class X 
+{
+    Y b = new Y();
+    X() 
+    { 
+        System.out.print("X"); }
+}
+class Y 
+{
+    Y() 
+    { 
+        System.out.print("Y");  }
+}
+public class Z extends X 
+{
+    Y y = new Y();
+    Z() 
+    { 
+        System.out.print("Z");   }
+    public static void main(String[] args) 
+    {
+           new Z(); }
+}  yxyz
+

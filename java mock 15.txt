@@ -1,0 +1,228 @@
+
+
+
+
+                                       JAVA MOCK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class A {
+  public String foo() {
+    return "a";
+  }
+}
+
+public class B extends A {
+  public String foo() {
+    return "b";
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    A a = (A) new B();
+    System.out.println(a.foo());
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ What is the outcome?
+int value = (int) 2.0 / 3.0;
+System.out.println(value);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------
+What will be printed?
+double value = -0.0;
+System.out.println(value);
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------
+
+---------------------------------------------
+public class Test {
+
+  static boolean printAndReturn(boolean value) {
+    System.out.println(value);
+    return value;
+  }
+
+  public static void main(String[] args) {
+    if (printAndReturn(false) && printAndReturn(true)) {
+      System.out.println(true);
+    } else {
+      System.out.println(false);
+    }
+  }
+
+}  false false
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+int a = 10;
+System.out.println(a + ~a);
+
+------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public interface I {
+  public void method();
+}
+
+public abstract C implements I {
+  private C() {
+  }
+
+  public static C getInstance() {
+    return new C();
+  }
+
+  public void method() {
+  }
+}
+
+
+-------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Base {
+  0
+}
+
+
+---------------------------------------------------------------
+List l1 =  new ArrayList();
+ArrayList l2 = new ArrayList();
+
+
+l1.add(10);
+l2.add(10);
+----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What will be the result of compiling and executing this code?
+String s = null;
+if ((s != null) || (!s.isEmpty())) {
+  System.out.println(s);
+} else {
+  System.out.println("the string is null");
+}

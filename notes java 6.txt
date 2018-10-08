@@ -1,0 +1,276 @@
+                                        JAVA CODING MOCK
+
+class PassS 
+{
+    public static void main(String [] args) 
+    {
+        PassS p = new PassS();
+        p.start();
+    }
+
+    void start() 
+    {
+        String s1 = "slip";
+        String s2 = fix(s1);-----stream
+        System.out.println(s1 + " " + s2);-----slip stream
+    }
+
+    String fix(String s1) 
+    {
+        s1 = s1 + "stream";--slipstream
+        System.out.print(s1 + " ");---slipstream
+        return "stream";
+    }
+}
+                     ANS:::::slipstream slip stream
+---------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Test 
+{
+    public static void main(String [] args) 
+    {
+        int x=20;
+        String sup = (x < 15) ? "small" : (x < 22)? "tiny" : "huge";
+        System.out.println(sup);
+    }
+}
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Test 
+{
+    public static void main(String [] args) 
+    {
+        int x= 0;
+        int y= 0;
+        for (int z = 0; z < 5; z++)
+        {
+            if (( ++x > 2 ) && (++y > 2))
+            {
+                x++;----6
+            }
+        }
+        System.out.println(x + " " + y);
+    }
+}               6 3
+--------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class My extends Thread 
+{
+    public static void main(String [] args) 
+    {
+        My t = new My();
+        Thread x = new Thread(t);
+        x.start(); /* Line 7 */
+    }
+    public void run() 
+    {
+        for(int i = 0; i < 3; ++i) 
+        {
+            System.out.print(i + "..");
+        }
+    }
+}                  0..1..2..
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Test 
+{  
+    public static void main(String args[]) 
+    { 
+        int i = 1, j = 0; 
+        switch(1) 
+        { 
+            case 2: j += 6; 
+            case 4: j += 1; 
+            default: j += 2;------j=j+2=0+2=2 
+            case 0: j += 4; ------j=J+4=2+4=6
+        } 
+        System.out.println("j = " + j); 
+    } 
+}         6
+---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+String x = "xyz";
+x.toUpperCase(); /* Line 2 */
+String y = x.replace('Y', 'y');
+y = y + "abc";
+System.out.println(y);
+
+----------xyzabc
+------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Myfile 
+{ 
+    public static void main (String[] args) 
+    {
+        String biz = args[1]; 
+        String baz = args[2]; 
+        String rip = args[3]; 
+        System.out.println("Arg is " + rip); 
+    } 
+}
+Select how you would start the program to cause it to print: Arg is 2
+A.	java Myfile 222
+B.	java Myfile 1 2 2 3 4
+C.	java Myfile 1 3 2 2---------------
+D.	java Myfile 0 1 2 3
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+

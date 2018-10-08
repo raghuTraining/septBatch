@@ -1,0 +1,111 @@
+                                         Multi Threading
+
+Thread::::
+
+         A thread is a light weight sub process and threads are independent.
+
+Multi-Threading::::
+
+         Excecuting two or more methods in a single java program along with main method
+
+Multi-processing::::
+
+      MT and MP both are used to achieve multi-tasking but we use MT than MP ...because threads share a 
+common memory area.
+
+Multi-Tasking::::
+     
+       excuting multiple tasks simultaneously
+
+process-based(multi processing)
+Thread-based(multi Threading)
+
+------------------------------------------------------------------
+
+How to create thread::::
+
+Two ways to create a thread
+1)By extending Thread class
+
+			public class ThreadJoinMethod1 extends Thread
+
+2)By implementing Runnable Interface
+
+
+class A{
+void method1(){
+}
+}
+
+class B extends A implements Runnable{
+
+}
+
+Commonly used methods in Threads:::::
+
+run(): used to perform a action of a thread
+start(): starts the excecution of the thread...
+sleep(milliseconds): It causes currently executing thread to sleep for 
+specified amount of time.
+join(): waits for thread to die.
+getPriority(): return the priority of thread
+setPriority():changes the priority of the thread
+getName():
+setName():
+currentThread():
+isAlive():tests if the thread is alive.
+suspend():temporarly suspends the thread
+resume():it is used to resume the suspended thread
+stop():it will permenently stop the thread
+yield(): causes the currently executing thread object to temporarily pause
+interrupt():interrupts the thread
+
+
+                Life Cycle of a Thread
+
+
+New----It remains in this state until the program starts the thread. It is also referred ads
+born state
+
+Runnable---After starts, the thread becomes runnable
+
+waiting----While the thread waits for another thread to perform task
+
+Timed wait---wait for specified time.
+
+Terminated(Dead)----when it completes its task ...it enters into terminated state.
+
+
+                                  Thread Scheduler
+
+TS in java is the part of JVM that decides which thread should run and there is no guarantee that
+
+which runnable thread will be choosen.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
